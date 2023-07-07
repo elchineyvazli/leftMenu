@@ -1,0 +1,113 @@
+nav {
+    height: 600px;
+    display: flex;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    border-radius: 0 40px 40px 0;
+    justify-content: flex-end;
+    transition: .7s;
+    background-color: green;
+
+    .navLinksContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: relative;
+        justify-content: center;
+        border-radius: 0 40px 40px 0;
+
+        li {
+
+            .navLinks {
+                position: relative;
+                width: 100px;
+                height: 50px;
+
+                &::after {
+                    width: 100px;
+                    height: 50px;
+                    content: '';
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // border: solid 1px red;
+                    position: absolute;
+                    top: -35px;
+                    left: -44px;
+                    z-index: -2;
+                    text-align: center;
+                    color: green;
+                    transition: .6s;
+                }
+
+                &:hover::after {
+                    left: 56px;
+                }
+            }
+
+            .aboutUs {
+                &::after {
+                    content: 'Haqqımızda';
+                }
+            }
+
+
+            .specialOffers {
+                &::after {
+                    content: 'Xüsusi təkliflər';
+                }
+            }
+
+            .catalog {
+                &::after {
+                    content: 'Kataloq';
+                }
+            }
+
+            .cards {
+                &::after {
+                    content: 'Kartlar';
+                }
+            }
+
+            .career {
+                &::after {
+                    content: 'Karyera';
+                }
+            }
+
+            .activities {
+                &::after {
+                    content: 'Fəaliyyətlər';
+                }
+            }
+
+            .contactUs {
+                &::after {
+                    content: 'Əlaqə';
+                }
+            }
+        }
+
+        .navButton {
+            width: 0px;
+            height: 0px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 20px green;
+            position: absolute;
+            transform: rotate(45deg);
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            top: 280px;
+            cursor: pointer;
+            user-select: none;
+            z-index: -1;
+            border-radius: 10px;
+            transition: .6s;
+        }
+    }
+}
